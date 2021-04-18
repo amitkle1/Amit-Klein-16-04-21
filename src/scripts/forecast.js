@@ -2,7 +2,7 @@ const key = "pvtKbcF8V0m13JjHoE2bzqQ6Yk1msTfu";
 
 //get weather information
 const getWeather = async (id) => {
-  const base = "http://dataservice.accuweather.com/currentconditions/v1/";
+  const base = "https://dataservice.accuweather.com/currentconditions/v1/";
   const query = `${id}?apikey=${key}`;
   const response = await fetch(base + query);
   const data = await response.json();
@@ -11,7 +11,7 @@ const getWeather = async (id) => {
 
 //get 5 days weather information
 const getFiveDaysWeather = async (id) => {
-  const base = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/";
+  const base = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/";
   const query = `${id}?apikey=${key}`;
   const response = await fetch(base + query);
   const data = await response.json();
@@ -21,7 +21,7 @@ const getFiveDaysWeather = async (id) => {
 //get city information
 const getCity = async (city) => {
   const base =
-    "http://dataservice.accuweather.com/locations/v1/cities/autocomplete";
+    "https://dataservice.accuweather.com/locations/v1/cities/autocomplete";
   const query = `?apikey=${key}&q=${city}`;
 
   const response = await fetch(base + query);
@@ -31,7 +31,7 @@ const getCity = async (city) => {
 
 const getGeopositionWeather = async (position) => {
   const base =
-    "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search";
+    "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search";
   const query = `?apikey=${key}&q=${position}`;
   const response = await fetch(base + query);
   const data = await response.json();
