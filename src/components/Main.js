@@ -48,7 +48,6 @@ function Main({
         setIsAlert(false);
         setCityElement(res.LocalizedName + ", " + res.Country.LocalizedName);
         setCityName(res.LocalizedName + ", " + res.Country.LocalizedName);
-
         setCityKey(res.Key);
         setChangeValue("");
       } else {
