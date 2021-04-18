@@ -16,6 +16,7 @@ function Main({
   cityElement,
   setCityElement,
   index,
+  setIndex,
   isCelsius,
   setIsCelsius,
 }) {
@@ -63,6 +64,9 @@ function Main({
   };
   const removeFromFavoritesHadnler = (city) => {
     dispatch(removeFromFavorites(city, cityElement));
+    if (forecast.listReducer.favorites.length === 0) {
+      setIndex(null);
+    }
   };
   const changeDegree = () => {
     setIsCelsius((prev) => !prev);
