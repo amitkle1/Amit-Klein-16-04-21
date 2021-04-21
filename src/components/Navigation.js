@@ -6,7 +6,7 @@ function Navigation({ theme, setTheme }) {
   return (
     <>
       <Navbar bg="dark" variant="dark" className="justify-content-between">
-        <Navbar.Brand>Herolo Weather Task</Navbar.Brand>
+        <Navbar.Brand>My Weather</Navbar.Brand>
         <Nav style={{ display: "flex", gap: "30px" }}>
           <Link to="/" style={{ color: "#fff" }}>
             Home

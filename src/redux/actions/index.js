@@ -1,17 +1,5 @@
 import { getFiveDaysWeather } from "../../scripts/forecast";
 
-export const increment = (num) => {
-  return {
-    type: "INCREMENT",
-    payload: num,
-  };
-};
-
-export const decrement = () => {
-  return {
-    type: "DECREMENT",
-  };
-};
 export const addToFavorites = (city, cityElement) => {
   return {
     type: "ADD_TO_FAVORITES",
